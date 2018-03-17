@@ -6,6 +6,10 @@
 # where the resulting jar files will be copied. If no argument is provided,
 # the script will use a temporary directory.
 
+set -e
+
+BAZEL=${BAZEL:-bazel}
+
 create_artifact() {
   jar cf $1 .
   mv $1 $2
@@ -33,8 +37,8 @@ for artifact in "${elemental_artifacts[@]}"; do
 
   # ask bazel to explicitly build both jar files
   pushd "${bazel_root}"
-  bazel build "${artifact_bazel_path}:${jar_file}"
-  bazel build "${artifact_bazel_path}:${src_jar}"
+  ${BAZEL} build "${artifact_bazel_path}:${jar_file}"
+  ${BAZEL} build "${artifact_bazel_path}:${src_jar}"
   popd
 
   tmp_directory="$(mktemp -d)"
