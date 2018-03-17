@@ -8,10 +8,10 @@
     <version>7</version>
   </parent>
 
-  <groupId>com.google.elemental2</groupId>
+  <groupId>com.vertispan.elemental2</groupId>
   <artifactId>elemental2-media</artifactId>
-  <version>1.0.0-RC1</version>
-  <packaging>jar</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
   <name>Elemental2 Media</name>
   <description>Thin Java abstractions for the native media APIs provided by the browser.</description>
@@ -24,24 +24,56 @@
       <version>1.0.2</version>
     </dependency>
     <dependency>
-      <groupId>com.google.jsinterop</groupId>
+      <groupId>com.vertispan.jsinterop</groupId>
       <artifactId>base</artifactId>
-      <version>1.0.0-RC1</version>
+      <version>1.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>com.google.elemental2</groupId>
+      <groupId>com.vertispan.elemental2</groupId>
       <artifactId>elemental2-core</artifactId>
-      <version>1.0.0-RC1</version>
+      <version>1.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>com.google.elemental2</groupId>
+      <groupId>com.vertispan.elemental2</groupId>
       <artifactId>elemental2-dom</artifactId>
-      <version>1.0.0-RC1</version>
+      <version>1.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>com.google.elemental2</groupId>
+      <groupId>com.vertispan.elemental2</groupId>
       <artifactId>elemental2-promise</artifactId>
-      <version>1.0.0-RC1</version>
+      <version>1.0.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <id>attach-artifacts</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attach-artifact</goal>
+            </goals>
+            <configuration>
+              <artifacts>
+                <artifact>
+                  <file>../elemental2-media.jar</file>
+                  <type>jar</type>
+                </artifact>
+                <artifact>
+                  <file>../elemental2-media-sources.jar</file>
+                  <type>jar</type>
+                  <classifier>sources</classifier>
+                </artifact>
+              </artifacts>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
