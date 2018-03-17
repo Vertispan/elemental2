@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.google.elemental2</groupId>
+  <artifactId>elemental2-parent</artifactId>
+  <version>1.0.0-RC1</version>
+  <packaging>jar</packaging>
+
+  <name>Elemental2 Parent</name>
+
+  <modules>
+    <module>core</module>
+    <module>dom</module>
+    <module>indexeddb</module>
+    <module>media</module>
+    <module>promise</module>
+    <module>svg</module>
+    <module>webgl</module>
+    <module>webstorage</module>
+  </modules>
+
+</project>
