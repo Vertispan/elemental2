@@ -47,10 +47,10 @@ for artifact in "${elemental_artifacts[@]}"; do
   jar cf "elemental2-${artifact}.jar" .
   popd
 
-  mv "${tmp_directory}/elemental2-${artifact}.jar" "${artifact_directory}"
+  yes | mv "${tmp_directory}/elemental2-${artifact}.jar" "${artifact_directory}"
   echo "elemental2-${artifact}.jar created in ${artifact_directory}"
 
-  mv "${artifact_path}/${src_jar}" "${artifact_directory}/elemental2-${artifact}-sources.jar"
+  yes | mv "${artifact_path}/${src_jar}" "${artifact_directory}/elemental2-${artifact}-sources.jar"
   echo "elemental2-${artifact}-sources.jar created in ${artifact_directory}"
 
   rm -rf "${tmp_directory}"
