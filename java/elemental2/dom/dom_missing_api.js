@@ -297,6 +297,15 @@ Selection.prototype.setBaseAndExtent = function(
 Selection.prototype.setPosition = function(node, offset) {};
 // End of API definition for Selection type.
 
+
+// Members declared in gecko_dom.js
+/** @type {number} */
+HTMLInputElement.prototype.selectionStart;
+
+/** @type {number} */
+HTMLInputElement.prototype.selectionEnd;
+
+
 // Access to the BatterystatusManager Object
 // This is defined in //javascript/externs/gecko_dom.js
 // should be moved to //javascript/externs/w3c_batterystatus.js
