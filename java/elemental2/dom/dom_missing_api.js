@@ -436,6 +436,15 @@ Window.prototype.devicePixelRatio;
  */
 Window.prototype.getSelection = function() {};
 
+
+/**
+ * Defined in ie_dom.js
+ *
+ * @type {!Element}
+ * @see http://msdn.microsoft.com/en-us/library/ms533065(VS.85).aspx
+ */
+Document.prototype.activeElement;
+
 /**
  * @type {!Console}
  * @suppress {duplicate}
