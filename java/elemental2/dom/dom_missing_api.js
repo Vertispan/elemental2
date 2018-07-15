@@ -313,6 +313,21 @@ HTMLInputElement.prototype.selectionEnd;
  */
 Element.prototype.outerHTML;
 
+/**
+ * Declared in gecko_dom.js
+ *
+ * @type {!NodeList<!Element>}
+ * @see https://developer.mozilla.org/en/DOM/element.children
+ */
+Element.prototype.children;
+
+/**
+ * Declared in ie_dom.js
+ * @type {Element}
+ * @see http://msdn.microsoft.com/en-us/library/ms534327(VS.85).aspx
+ */
+Node.prototype.parentElement;
+
 
 // Access to the BatterystatusManager Object
 // This is defined in //javascript/externs/gecko_dom.js
