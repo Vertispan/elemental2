@@ -419,6 +419,15 @@ Window.prototype.console;
 Window.prototype.devicePixelRatio;
 
 /**
+ * Defined in gecko_dom.js.
+ *
+ * @return {Selection}
+ * @see https://developer.mozilla.org/en/DOM/window.getSelection
+ * @nosideeffects
+ */
+Window.prototype.getSelection = function() {};
+
+/**
  * @type {!Console}
  * @suppress {duplicate}
  */
