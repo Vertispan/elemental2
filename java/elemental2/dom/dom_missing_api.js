@@ -305,6 +305,14 @@ HTMLInputElement.prototype.selectionStart;
 /** @type {number} */
 HTMLInputElement.prototype.selectionEnd;
 
+/**
+ * Declared in ie_dom.js
+ *
+ * @type {string}
+ * @see http://msdn.microsoft.com/en-us/library/aa752326(VS.85).aspx
+ */
+Element.prototype.outerHTML;
+
 
 // Access to the BatterystatusManager Object
 // This is defined in //javascript/externs/gecko_dom.js
